@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gitali2/presentation/pages/get-started/GetStarted.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:gitali2/core/configs/appVector.dart';
 
@@ -12,9 +13,19 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreen extends State<SplashScreen> {
 
+  Future<void> delayRedirect() async {
+    await Future.delayed(Duration(seconds: 3));
+    Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+            builder: (BuildContext context) => const Getstarted()));
+  }
+
 
   @override
   void initState() {
+    super.initState();
+    delayRedirect();
     
   }
 
