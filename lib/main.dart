@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gitali2/core/configs/themes/app.theme.dart';
 import 'package:gitali2/presentation/bloc/themeCubit.dart';
+import 'package:gitali2/presentation/pages/authentication/AuthStartPage.dart';
 import 'package:gitali2/presentation/pages/splash/Splash.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
@@ -33,7 +34,8 @@ class MyApp extends StatelessWidget {
             themeMode: mode,
             darkTheme: AppTheme.darkTheme,
             debugShowCheckedModeBanner: false,
-            home: SplashScreen()),
+                home: Authstartpage(),
+              )
       ),
     );
   }

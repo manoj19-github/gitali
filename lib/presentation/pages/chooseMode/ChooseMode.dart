@@ -81,7 +81,7 @@ class ChooseModePage extends StatelessWidget {
                                         : Border.all(color: Colors.transparent),
                                     borderRadius: BorderRadius.circular(50)),
                                 padding: EdgeInsets.all(8),
-                                child: Image.asset(Appimages.sunImage)),
+                                child: Image.asset(Appimages.moonImage)),
                           ),
                           GestureDetector(
                             onTap: () => {
@@ -91,14 +91,14 @@ class ChooseModePage extends StatelessWidget {
                             },
                             child: Container(
                                 decoration: BoxDecoration(
-                                    color: Colors.black26,
+                                    color: ThemeData().focusColor,
                                     border: context.read<ThemeCubit>().state ==
                                             ThemeMode.light
                                         ? Border.all(color: Colors.white)
                                         : Border.all(color: Colors.transparent),
                                     borderRadius: BorderRadius.circular(50)),
                                 padding: EdgeInsets.all(8),
-                                child: Image.asset(Appimages.moonImage)),
+                                child: Image.asset(Appimages.sunImage)),
                           ),
                           // Image.asset(Appimages.sunImage),
                           // SizedBox(

@@ -4,8 +4,14 @@ class CTAButton extends StatelessWidget {
   final VoidCallback onPressed;
   final double btnHeight;
   final String title;
+  final Color? btnColor;
+  final Color? textColor;
   CTAButton(
-      {required this.onPressed, required this.title, required this.btnHeight});
+      {required this.onPressed,
+      required this.title,
+      required this.btnHeight,
+      this.btnColor,
+      this.textColor});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +20,7 @@ class CTAButton extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          color: Colors.teal,
+          color: this.btnColor ?? Colors.teal,
         ),
         height: btnHeight,
         width: double.infinity,
@@ -23,7 +29,7 @@ class CTAButton extends StatelessWidget {
               style: TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.bold,
-                  color: Colors.white)),
+                  color: this.textColor ?? Colors.white)),
         ),
       ),
     );
