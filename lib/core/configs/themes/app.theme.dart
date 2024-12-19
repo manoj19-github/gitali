@@ -5,10 +5,19 @@ class AppTheme {
   static final lightTheme = ThemeData(
     primaryColor: AppColors.primary,
     focusColor: Colors.black87,
-    
-    
     scaffoldBackgroundColor: AppColors.lightBackground,
-    brightness:Brightness.light ,
+    inputDecorationTheme: InputDecorationTheme(
+      fillColor: AppColors.darkBackground,
+      hintStyle:
+          TextStyle(color: Color(0xffA7A7A7), fontWeight: FontWeight.w500),
+      filled: true,
+      contentPadding: const EdgeInsets.all(30),
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(20),
+        borderSide: const BorderSide(color: Colors.black, width: 0.4),
+      ),
+    ),
+    brightness: Brightness.light,
     fontFamily: "Satoshi",
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
@@ -23,7 +32,22 @@ class AppTheme {
   static final darkTheme = ThemeData(
     primaryColor: AppColors.primary,
     scaffoldBackgroundColor: AppColors.darkBackground,
-    brightness:Brightness.dark,
+    inputDecorationTheme: InputDecorationTheme(
+      hintStyle:
+          TextStyle(color: Color(0xffA7A7A7), fontWeight: FontWeight.w500),
+      fillColor: AppColors.darkBackground,
+      filled: true,
+      contentPadding: const EdgeInsets.all(13),
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(20),
+        borderSide: const BorderSide(color: Colors.white, width: 0.4),
+      ),
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(20),
+        borderSide: const BorderSide(color: Colors.white, width: 0.4),
+      ),
+    ),
+    brightness: Brightness.dark,
     focusColor: Colors.white,
     fontFamily: "Satoshi",
     elevatedButtonTheme: ElevatedButtonThemeData(

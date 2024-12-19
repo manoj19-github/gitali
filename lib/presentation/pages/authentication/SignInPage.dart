@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:gitali2/common/widgets/CTAButton.dart';
 import 'package:gitali2/common/widgets/InputField.dart';
 import 'package:gitali2/core/configs/appVector.dart';
-import 'package:gitali2/presentation/pages/authentication/SignInPage.dart';
+import 'package:gitali2/presentation/pages/authentication/SignupPage.dart';
 import 'package:gitali2/presentation/widgets/AuthAppBar.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class SignupPage extends StatelessWidget {
-  const SignupPage({super.key});
+class SignInPage extends StatelessWidget {
+  const SignInPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class SignupPage extends StatelessWidget {
                   Container(
                     margin: EdgeInsets.only(top: SCREEN_HEIGHT * 0.05),
                     child: Text(
-                      "Register",
+                      "Login",
                       style: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.bold,
@@ -37,12 +37,6 @@ class SignupPage extends StatelessWidget {
                   ),
                   SizedBox(
                     height: 50,
-                  ),
-                  InputField(
-                    hintText: "Full Name",
-                  ),
-                  SizedBox(
-                    height: 25,
                   ),
                   InputField(
                     hintText: "Email Address",
@@ -59,13 +53,12 @@ class SignupPage extends StatelessWidget {
                   SizedBox(
                     height: 45,
                   ),
-                  CTAButton(
-                      onPressed: () {}, title: "Create Account", btnHeight: 40),
+                  CTAButton(onPressed: () {}, title: "Sign In", btnHeight: 40),
                   const SizedBox(height: 10),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text("Do you have an account?",
+                      Text("Are you new user? ",
                           style: TextStyle(
                               fontWeight: FontWeight.w500, fontSize: 16)),
                       const SizedBox(width: 2),
@@ -74,8 +67,8 @@ class SignupPage extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                                 builder: (BuildContext context) =>
-                                    SignInPage())),
-                        child: Text(" Sign in",
+                                    SignupPage())),
+                        child: Text(" Sign up",
                             style: TextStyle(
                                 decoration: TextDecoration.underline,
                                 decorationColor: Colors.teal,

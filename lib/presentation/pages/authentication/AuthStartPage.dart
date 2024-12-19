@@ -4,7 +4,9 @@ import 'package:gitali2/common/widgets/CTAButton.dart';
 import 'package:gitali2/core/configs/appImages.dart';
 import 'package:gitali2/core/configs/appVector.dart';
 import 'package:gitali2/presentation/bloc/themeCubit.dart';
+import 'package:gitali2/presentation/pages/authentication/SignInPage.dart';
 import 'package:gitali2/presentation/pages/authentication/SignupPage.dart';
+import 'package:gitali2/presentation/widgets/AuthAppBar.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Authstartpage extends StatelessWidget {
@@ -15,6 +17,7 @@ class Authstartpage extends StatelessWidget {
     double SCREEN_width = MediaQuery.sizeOf(context).width;
     double SCREEN_HEIGHT = MediaQuery.sizeOf(context).height;
     return Scaffold(
+        appBar: AuthAppBar(),
         body: Stack(children: [
       Align(
           alignment: Alignment.bottomLeft,
@@ -38,40 +41,9 @@ class Authstartpage extends StatelessWidget {
             Appimages.authImage3,
             fit: BoxFit.cover,
             height: 150,
-            width: 200,
-          )),
-      Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Container(
-              margin: EdgeInsets.only(
-                  top: SCREEN_HEIGHT * 0.05, left: SCREEN_width * 0.1),
-              child: InkWell(
-                  onTap: () => Navigator.pop(context),
-                  child: Icon(Icons.arrow_back_ios))),
-          const SizedBox(width: 20),
-          Container(
-            margin: EdgeInsets.only(
-              top: SCREEN_HEIGHT * 0.05,
+              width: 200,
             ),
-            child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-              Image.asset(Appvector.logo,
-                  width: SCREEN_width * 0.3, height: 80, fit: BoxFit.cover),
-              Padding(
-                padding: const EdgeInsets.only(right: 10),
-                child: Text(
-                  "Gitali",
-                  style: TextStyle(
-                      fontSize: 35,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: GoogleFonts.lato().fontFamily,
-                      color: Colors.teal),
-                ),
-              ),
-            ]),
           ),
-        ],
-      ),
       Container(
           margin: EdgeInsets.only(top: SCREEN_HEIGHT * 0.40),
           child: Column(
@@ -141,6 +113,11 @@ class Authstartpage extends StatelessWidget {
                             )),
                       ),
                       InkWell(
+                            onTap: () => Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        SignInPage())),
                         child: Container(
                             decoration: BoxDecoration(
                                 border: Border.all(color: Colors.teal),

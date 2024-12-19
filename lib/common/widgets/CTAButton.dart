@@ -27,7 +27,7 @@ class CTAButton extends StatelessWidget {
         child: Center(
           child: Text(title,
               style: TextStyle(
-                  fontSize: 22,
+                  fontSize: 17,
                   fontWeight: FontWeight.bold,
                   color: this.textColor ?? Colors.white)),
         ),
