@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "441493633209",
+    "project_id": "gitali2",
+    "storage_bucket": "gitali2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:441493633209:android:51d149bfb50c1f1d0c0368",
+        "android_client_info": {
+          "package_name": "com.example.gitali2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6NGEELj90WTj83Fsu6Eh1j9WZolt3U3M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
